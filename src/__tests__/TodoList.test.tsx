@@ -27,7 +27,7 @@ describe('TodoList', () => {
 
     const todoList = screen.getByTestId('todoList')
     expect(todoList).toBeInTheDocument()
-    expect(todoList.children).toHaveLength(3)
+    expect(todoList.children).toHaveLength(mockTodos.length)
   })
 
   test('test_todo_list_passes_correct_props', () => {

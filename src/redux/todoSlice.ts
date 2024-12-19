@@ -20,16 +20,13 @@ export const todoSlice = createSlice({
         completed: false
       })
     },
-    handleDragEnd: (state, action) => {
+    handleDragEnd: (state, action: PayloadAction<Todo[]>) => {
       state.todos = action.payload
     },
     toggleComplete: (state, action: PayloadAction<string>) => {
-      state.todos = state.todos.map((todo) => {
-        if (todo.id === action.payload) {
-          todo.completed = !todo.completed
-        }
-        return todo
-      })
+      state.todos = state.todos.map((todo) =>
+        todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+      )
     },
     deleteTodo: (state, action: PayloadAction<string>) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload)
@@ -43,13 +40,11 @@ export const todoSlice = createSlice({
         dueDate: string | null
       }>
     ) => {
-      state.todos = state.todos.map((todo) => {
-        if (todo.id === action.payload.id) {
-          todo.text = action.payload.text
-          todo.dueDate = action.payload.dueDate
-        }
-        return todo
-      })
+      state.todos = state.todos.map((todo) =>
+        todo.id === action.payload.id
+          ? { ...todo, text: action.payload.text, dueDate: action.payload.dueDate }
+          : todo
+      )
     }
   }
 })

@@ -16,6 +16,7 @@ A modern Todo List project built with React, TypeScript, and Vite, featuring com
 ### Version 1.0.0
 
 - ✨ Drag & Drop functionality
+- ⭐️ Animations of interaction
 - 🌍 Multi-language support (English/German)
 - 🌓 Dark/Light Theme
 - 📱 Responsive Design (400px, 768px, 1200px+)
@@ -50,7 +51,7 @@ A modern Todo List project built with React, TypeScript, and Vite, featuring com
 
 - Enhanced code maintainability and readability
 - Early error detection during development
-- Better IDE support and autocompletion
+- Better VS Code support and autocompletion
 - Improved team collaboration through type definitions
 
 #### Redux Toolkit
@@ -63,15 +64,14 @@ A modern Todo List project built with React, TypeScript, and Vite, featuring com
 #### Jest for Testing
 
 - Comprehensive testing framework with good TypeScript support
-- Snapshot testing capabilities
-- Large community and extensive documentation
 - Integration with GitHub Actions CI/CD and Codecov coverage reports
 
 ## 🔜 Upcoming Improvements
 
 - [x] Code Quality: Automated lint and style checks
+- [x] Test: Integration tests for Redux
 - [ ] Accessibility: Add more ARIA labels and Adjust color contrasts
-- [ ] Test: Integration tests for Redux
+- [ ] Animations: Add more animations of interactions for touch screens
 - [ ] Test: E2E tests for critical user flows
 - [ ] Security: add validations in Security Strategy
 
@@ -99,13 +99,20 @@ npm run deploy
 
 ## 🐛 Known Issues or Limitations
 
-- Touch Screen Hover Limitation: Touch screens don't support hover animations
-- Language Menu Rendering Issue: Language menu displays position incorrectly only in Chrome Developer Tool of PC or Laptop (it works fine on Phone)
+### Touch Screen Hover Limitation
 
-Chrome Developer Tool of PC / Laptop <br>
+- Hover animations are not supported on touch screens, as these devices do not provide hover states like mouse or touchpad pointers.
+- To ensure consistent UX across devices, alternative animations or interactions will be implemented specifically for touch screens.
+
+### Language Menu Positioning Issue
+
+- The language menu is displayed incorrectly in Chrome Developer Tools on desktop (PC/Laptop) but renders correctly on mobile devices.
+- As this issue is isolated to developer tools and does not affect real-world user experience, it will not be prioritized for a fix.
+
+🖥️ Chrome Developer Tool of PC / Laptop <br>
 ![Screenshot of language menu on PC / laptop](/src/assets/language%20menu%20on%20PC.png)
 
-Language menu displays on Phone <br>
+📲 Language menu displays on Phone <br>
 ![Screenshot of language menu on Phones](/src/assets/language%20menu%20on%20phone.png)
 
 ## 📋 Technical Documentation
@@ -167,7 +174,7 @@ src/
 ### Testing Strategy
 
 - Unit tests for components, coverage is over 80%, target is 100%.
-- Add more such as Integration and E2E tests
+- Add Integration test of Redux state management
 
 ### CI Strategy in Github Action
 

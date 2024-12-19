@@ -11,21 +11,30 @@ const rootReducer = combineReducers({
   todos: todoReducer
 })
 
-const getInitialState = () => ({
-  theme: {
-    mode: localStorage.getItem('theme')
-      ? (localStorage.getItem('theme') as ThemeState['mode'])
-      : 'dark'
-  },
-  language: {
-    code: (localStorage.getItem('i18nextLng') as LanguageState['code']) || 'en'
-  },
-  todos: {
-    todos: localStorage.getItem('todos')
-      ? JSON.parse(localStorage.getItem('todos') as string).todos
-      : DEMO_TASKS
+const getInitialState = () => {
+  const storedTheme = localStorage.getItem('theme')
+  const storedLanguage = localStorage.getItem('i18nextLng')
+  const storedTodos = localStorage.getItem('todos')
+
+  return {
+    theme: {
+      mode: storedTheme ? (storedTheme as ThemeState['mode']) : 'dark'
+    },
+    language: {
+      code: (storedLanguage as LanguageState['code']) || 'en'
+    },
+    todos: {
+      todos: (() => {
+        try {
+          return storedTodos ? JSON.parse(storedTodos).todos : DEMO_TASKS
+        } catch (error) {
+          console.error('Failed to parse todos from localStorage:', error)
+          return DEMO_TASKS
+        }
+      })()
+    }
   }
-})
+}
 
 export const store = configureStore({
   reducer: rootReducer,
