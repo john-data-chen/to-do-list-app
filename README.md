@@ -23,6 +23,13 @@ A production-ready Todo List application demonstrating modern frontend architect
 - 🌓 Dark/Light Theme
 - 💾 Persistent data via local storage
 
+**Key Accomplishments**:
+
+- **Test Coverage in Codecov**: 85%+
+- **Code Quality in Codacy**: B
+- **Optimized performance**: for both desktop and mobile devices.
+- **CI/CD automation**: in GitHub actions.
+
 ## 🛠️ Technical Stack
 
 [![React Dependencies](https://img.shields.io/librariesio/release/npm/react)](https://libraries.io/npm/react)
@@ -31,12 +38,6 @@ A production-ready Todo List application demonstrating modern frontend architect
 - **Frontend**: React 18.3.1, TypeScript 5.6.2, Redux Toolkit
 - **Build & Quality**: Vite, Jest, Playwright, ESLint , Prettier, Husky
 - **CI/CD**: GitHub Actions, Codecov, Codacy
-
-### Technical Highlights
-
-- **Test Coverage in Codecov**: 85%+
-- **Code Quality in Codacy**: B
-- **Testing Efficiency**: Parallel execution to test across browsers
 
 ## 🚀 Getting Started
 
@@ -59,9 +60,10 @@ npm run deploy
 
 ## 🔜 Upcoming Improvements
 
-- [ ] Expand ARIA support and improve color contrast.
-- [ ] Add additional touch-friendly animations.
-- [ ] Add support of Firebase to more functions
+I will add functions into the another project, make it a Trello like project management tool.
+
+- [ ] Add Pomodoro
+- [ ] Add Users and Tasks management
 
 ## 📖 Detailed Technical Documentation
 
