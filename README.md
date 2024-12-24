@@ -60,10 +60,15 @@ npm run deploy
 
 ## 🔜 Upcoming Improvements
 
-I will add functions into the another project, make it a Trello like project management tool.
+Limited by the GitHub Page architecture, this project won't be updated anymore.
+I will add functions into the another project [Next Board](https://next-board-gfq9unm5x-johndchen-next-app.vercel.app/) such as
 
-- [ ] Add Pomodoro
-- [ ] Add Users and Tasks management
+- [ ] Use Next.js to be a full stack project
+- [ ] Use Shadcn UI to fitting WAI-ARIA and more browsers
+- [ ] Login to manage users, projects and tasks in security
+- [ ] Pomodoro
+
+and more...
 
 ## 📖 Detailed Technical Documentation
 
