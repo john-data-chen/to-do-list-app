@@ -61,7 +61,7 @@ npm run deploy
 ## 🔜 Upcoming Improvements
 
 Limited by the GitHub Page architecture, this project won't be updated anymore.
-I will add functions into the another project [Next Board](https://next-board-gfq9unm5x-johndchen-next-app.vercel.app/) such as
+I will add functions into the another project **Next Board** such as
 
 - [ ] Use Next.js to be a full stack project
 - [ ] Use Shadcn UI to fitting WAI-ARIA and more browsers
